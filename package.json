@@ -1,0 +1,44 @@
+{
+  "name": "@devtools-at/json-schema-validator",
+  "version": "1.0.0",
+  "description": "Validate JSON against schemas",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "json-schema-validator",
+    "devtools",
+    "utility",
+    "converter",
+    "encoder",
+    "decoder"
+  ],
+  "author": "DevTools.at",
+  "license": "MIT",
+  "homepage": "https://devtools.at/tools/json-schema-validator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devtools-at/json-schema-validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devtools-at/json-schema-validator/issues"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}
